@@ -5,9 +5,10 @@ export default class Auth {
     //we'll pass React Router's history in so Auth can perform redirects.
     this.history = history; //reference to instance var
     this.auth0 = new auth0.WebAuth({
-      domain: process.env.REACT_APP_AUTH0_DOMAIN,
-      ClientID: process.env.REACT_APP_AUTH0_CLIENT_ID,
-      redirectUri: process.env.REACT_APP_AUTH0_CALLBACK_URL,
+      //domain: process.env.REACT_APP_AUTH0_DOMAIN, //Giving error with process.env,so hardcoding
+      domain: "consultation-dev.auth0.com",
+      clientID: "M1k07nP1qvgpiYgrqdzErO6bm0Bkp1PG",
+      redirectUri: "http://localhost:3000/callback",
       responseType: "token id_token", //token->Access token,user can make API calls.id_token->JWT token to authenticate user when they login.
       scope: "openid profile email", //permission on basic user
     });

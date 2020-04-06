@@ -6,7 +6,7 @@ class Home extends Component {
       <div>
         <h1> Good Morning All , Happy Sunday! </h1>
         <h2>Welcome To Online Doctor Consultation App</h2>
-        <button onClick={this.props.auth.login}>Log In</button>
+        <button onClick={this.props.login}>Log In</button>
       </div>
     );
   }
